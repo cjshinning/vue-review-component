@@ -24,13 +24,19 @@
             ></blog-post>
         </div> -->
 
-        <custom-input v-model="searchText"></custom-input>
+        <!-- <custom-input v-model="searchText"></custom-input> -->
+
+        <alert-box>
+            <p>something bad happend1.</p>
+            <p>someting...</p>
+        </alert-box>
     </div>
 </template>
 <script>
 // import ButtonCounter from './components/button-counter';
 // import BlogPost from './components/blog-post';
-import CustomInput from './components/custom-input';
+// import CustomInput from './components/custom-input';
+import AlertBox from './components/alert-box';
 export default {
     name: 'App',
     data(){
@@ -65,7 +71,8 @@ export default {
     components: {
         // ButtonCounter
         // BlogPost
-        CustomInput
+        // CustomInput
+        AlertBox
     }
 }
 </script>
