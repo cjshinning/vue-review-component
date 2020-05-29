@@ -15,16 +15,22 @@
             v-bind:content="post.content"
         ></blog-post> -->
 
-        <blog-post
-            v-for="post in posts"
-            v-bind:key="post.id"
-            v-bind:post="post"
-        ></blog-post>
+        <!-- <div :style="{ fontSize: postFontSize + 'em' }">
+            <blog-post
+                v-for="post in posts"
+                v-bind:key="post.id"
+                v-bind:post="post"
+                v-on:enlarge-text="onEnlargeText"
+            ></blog-post>
+        </div> -->
+
+        <custom-input v-model="searchText"></custom-input>
     </div>
 </template>
 <script>
 // import ButtonCounter from './components/button-counter';
-import BlogPost from './components/blog-post';
+// import BlogPost from './components/blog-post';
+import CustomInput from './components/custom-input';
 export default {
     name: 'App',
     data(){
@@ -45,12 +51,21 @@ export default {
                     title: 'My Journet with Vue3',
                     content: 'blog content 3'
                 }
-            ]
+            ],
+            postFontSize: 1,
+            searchText: ''
+        }
+    },
+    methods: {
+        onEnlargeText: function(enlargeAmount){
+            // console.log(enlargeAmount)
+            this.postFontSize += enlargeAmount;
         }
     },
     components: {
         // ButtonCounter
-        BlogPost
+        // BlogPost
+        CustomInput
     }
 }
 </script>
