@@ -33,6 +33,9 @@
     "webpack-dev-server": "^3.11.0"
   },
   "dependencies": {
-    "vue": "^2.6.11"
+    "animate": "^1.0.0",
+    "animate.css": "^4.1.0",
+    "vue": "^2.6.11",
+    "wowjs": "^1.1.3"
   }
 }
